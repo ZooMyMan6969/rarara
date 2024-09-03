@@ -18,6 +18,8 @@ end
 local function main_pulse()
    if not get_local_player() then return end
 
+   if not GUI.elements.main_toggle:get() then return end
+
    Settings.update()
 
    local loot_closest_toggle = GUI.elements.general.loot_closest_toggle:get()
